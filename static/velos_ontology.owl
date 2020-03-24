@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.schema.org#"
+     xml:base="http://www.schema.org"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.schema.org"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#address">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#availability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#availability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#available_bike_stands -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#available_bike_stands">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#available_bikes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#available_bikes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#banking -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#banking">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#bike_stands -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#bike_stands">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#commune -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#commune">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#description">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#lat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#lat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#lng -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#lng">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#status -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#status">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#station"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#station -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/chloebalcer/ontologies/2020/2/untitled-ontology-5#station"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

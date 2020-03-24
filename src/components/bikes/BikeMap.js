@@ -1,7 +1,9 @@
 import { Map, GoogleApiWrapper, Marker,InfoWindow} from 'google-maps-react';
 import React, { Component } from 'react';
 import {query, Connection} from 'stardog';
-
+import {
+    dbName, markers
+  } from "../../helpers/constants";
   const readQuery = `select ?lat ?lng 
 where {
     ?l <http://schema.org/number> ?number .
@@ -77,6 +79,6 @@ class BikeMap extends Component{
 
 
 export default GoogleApiWrapper({
-    apiKey: 'secretcode'
+    apiKey: 'AIzaSyBE0oM95iQmrpxaKt7nREeHZwLqSe85nw0'
   })(BikeMap);
 
