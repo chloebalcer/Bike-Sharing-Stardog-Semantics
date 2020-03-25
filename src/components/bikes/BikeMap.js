@@ -79,6 +79,6 @@ class BikeMap extends Component{
 
 
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyBE0oM95iQmrpxaKt7nREeHZwLqSe85nw0'
+    apiKey: 'enteryourcodehere'
   })(BikeMap);
 
