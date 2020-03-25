@@ -18,9 +18,6 @@ import {
   dbName,
 } from "../../helpers/constants";
 
-
-
-// Let's not take _quite_ the entire browser screen.
 const styles = {
     appInnerContainer: {
       width: "90%",
@@ -92,14 +89,12 @@ this.refreshData()
 
 
 getBindingValueForSelector(selector, binding) {
-    const bindingValue = binding[selector === "movie" ? "movies" : selector];
-    // NOTE: In a production app, we would probably want to do this formatting elsewhere.
+    const bindingValue = binding[selector === "bike" ? "bikes" : selector];
     return Array.isArray(bindingValue) ? bindingValue.join(", ") : bindingValue;
   }
 
   renderRowForBinding(binding, index) {
     return (
-      // Use every "selector" to extract table cell data from each binding.
       <TableRow key={binding.number}>
         {columnSelectors.map(selector => (
           <TableCell key={selector}>
@@ -134,52 +129,37 @@ refreshData() {
   });
 }
 
-// Our SPARQL query returns a new "row" (i.e., variable binding) for each
-// character for each movie in which the character appears. We don't want to
-// _display_ multiple rows for the same character, though. Instead, we want
-// to show _one_ row for each character, and, if the character was in several
-// movies, we want to show them as a group within that character's single row. This
-// method goes through the bindings, groups them under each individual
-// character's id, then merges them together, aggregating the movies as an
-// array of strings. It also cleans up some of the data so that it's more
-// readable in the UI.
+
 getBindingsFormattedForTable(bindings) {
-  // Group the bindings by each character id, in case multiple rows were
-  // returned for a single character.
+
   const bindingsById = bindings.reduce((groupedBindings, binding) => {
     const { value: number } = binding.number;
     groupedBindings[number] = groupedBindings[number] ? groupedBindings[number].concat(binding) : [binding];
     return groupedBindings;
   }, {});
 
-  // Sort the bindings by id (ascending), then, if there are multiple
-  // bindings for a single id, merge them together, aggregating movies as an
-  // array.
   return Object.keys(bindingsById)
-    .map(number => parseInt(number, 10)) // convert ids from strings to numbers for sorting
-    .sort() // we do this sorting client-side because `Object.keys` ordering is not guaranteed
+    .map(number => parseInt(number, 10)) 
+    .sort() 
     .map(number => {
-      // For each `id`, merge the bindings together as described above.
       return bindingsById[number].reduce(
         (bindingForTable, binding) => {
-          // Quick cleanup to remove IRI data that we don't want to display:
           const bindingValues = Object.keys(binding).reduce((valueBinding, key) => {
             const { type, value } = binding[key];
-            valueBinding[key] = type !== "uri" ? value : value.slice(value.lastIndexOf("/") + 1); // data cleanup
+            valueBinding[key] = type !== "uri" ? value : value.slice(value.lastIndexOf("/") + 1); 
             return valueBinding;
           }, {});
-          // Aggregate movies on the `movies` property, deleting `movie`:
-          const movies = bindingValues.movie
-            ? bindingForTable.movies.concat(bindingValues.movie)
-            : bindingForTable.movies;
-          delete bindingValues.movie;
+          const bikes = bindingValues.bike
+            ? bindingForTable.bikes.concat(bindingValues.bike)
+            : bindingForTable.bikes;
+          delete bindingValues.bike;
           return {
             ...bindingForTable,
             ...bindingValues,
-            movies
+            bikes
           };
         },
-        { movies: [] }
+        { bikes: [] }
       );
     });
 }
